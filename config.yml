@@ -1,0 +1,223 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove: 
+  - TV
+  - Podcasts
+  - Kontakte
+  - Musik
+  - Karten
+  - Safari
+  - Nachrichten
+  - Keynote
+  - Pages
+  - Numbers
+  - FaceTime
+  - Fotos
+dockitems_persist:
+  - name: "Chromium"
+    path: "/Applications/Chromium.app/"
+    pos: 2
+  - name: "Firefox"
+    path: "/Applications/Firefox.app/"
+    pos: 3
+  - name: "Arc"
+    path: "/Applications/Arc.app/"
+    pos: 4
+  - name: "WhatsApp"
+    path: "/Applications/WhatsApp.app/"
+    pos: 5
+  - name: "Signal"
+    path: "/Applications/Signal.app/"
+    pos: 6
+  - name: "AppFlowy"
+    path: "/Applications/AppFlowy.app/"
+    pos: 11
+  - name: "Notion"
+    path: "/Applications/Notion.app/"
+    pos: 12
+  - name: "Notion-Calendar"
+    path: "/Applications/Notion Calendar.app/"
+    pos: 13
+  - name: "Warp"
+    path: "/Applications/Warp.app/"
+    pos: 17
+  - name: "iTerm"
+    path: "/Applications/iTerm.app/"
+    pos: 18
+  - name: "Docker Desktop"
+    path: "/Applications/Docker.app/"
+    pos: 19
+  - name: "VSCodium"
+    path: "/Applications/VSCodium.app/"
+    pos: 20
+  - name: "Bitwarden"
+    path: "/Applications/Bitwarden.app/"
+    pos: 21
+  - name: "Autodesk Fusion 360"
+    path: "/Users/markus/Applications/Autodesk Fusion 360.app/"
+    pos: 22
+  - name: "OBS"
+    path: "/Applications/OBS.app/"
+    pos: 23
+  - name: "Spotify"
+    path: "/Applications/Spotify.app/"
+    pos: 24
+  - name: "VMware Fusion"
+    path: "/Applications/VMware Fusion.app/"
+    pos: 25
+  - name: "Microsoft Word"
+    path: "/Applications/Microsoft Word.app/"
+    pos: 26
+  - name: "Microsoft Excel"
+    path: "/Applications/Microsoft Excel.app/"
+    pos: 27
+  # - name: "DaVinci Resolve"
+  #   path: "/Applications/DaVinci Resolve/DaVinci Resolve.app/"
+  #   pos: 28
+  - name: "NordVPN"
+    path: "/Applications/NordVPN.app/"
+    pos: 29
+  - name: "Discord"
+    path: "/Applications/Discord.app/"
+    pos: 30
+  - name: "Disk Drill"
+    path: "/Applications/Disk Drill.app/"
+    pos: 31
+  - name: "Gemini 2"
+    path: "/Applications/Gemini 2.app/"
+    pos: 32
+
+configure_sudoers: true
+sudoers_custom_config: |
+  # Allow users in admin group to use sudo with no password.
+  %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages: []
+# - ansible # Installed via Pip.
+# - autoconf
+# - bash-completion
+# - doxygen
+# - gettext
+# - gifsicle
+# - git
+# - gh
+# - go
+# - gpg
+# - httpie
+# - iperf
+# - libevent
+# - sqlite
+# - mcrypt
+# - nmap
+# - node
+# - nvm
+# - php
+# - ssh-copy-id
+# - cowsay
+# - readline
+# - openssl
+# - pv
+# - wget
+# - wrk
+# - zsh-history-substring-search
+
+homebrew_taps: []
+#  - homebrew/core
+#  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - firefox
+  - chromium
+  - bitwarden
+  - calibre
+  - vscodium
+  - ultimaker-cura
+  - vlc
+  - iterm2
+  - whatsapp
+  - signal
+  - obs
+  - spotify
+  - vmware-fusion
+  - autodesk-fusion360
+  - nordvpn
+  - discord
+  - microsoft-office
+  - rectangle
+  - adobe-acrobat-reader
+  - disk-drill
+  - gemini
+  - notion
+  - notion-calendar
+  - appflowy
+  - warp
+  - arc
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Set to 'true' to configure Sublime Text.
+configure_sublime: false
+sublime_base_path: '~/Library/Application Support/Sublime Text'
+sublime_config_path: "Packages/User"
+sublime_package_control:
+  - "DocBlockr"
+  - "Dockerfile Syntax Highlighting"
+  - "FileDiffs"
+  - "GitHub Flavored Markdown Preview"
+  - "Jinja2"
+  - "Package Control"
+  - "PHP-Twig"
+  - "Pretty JSON"
+  - "SublimeLinter"
+  - "SublimeLinter-contrib-yamllint"
+  - "TrailingSpaces"
+  - "WordCount"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
+
+# xattr -cr /Applications/Chromium.app 
