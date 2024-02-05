@@ -1,7 +1,7 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 
@@ -104,39 +104,27 @@ dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
-  - .gitignore
-  - .inputrc
-  - .osx
-  - .vimrc
+  - .p10k.zsh
+  - .fzf.zsh
 
-homebrew_installed_packages: []
-# - ansible # Installed via Pip.
-# - autoconf
-# - bash-completion
-# - doxygen
-# - gettext
-# - gifsicle
-# - git
-# - gh
-# - go
-# - gpg
-# - httpie
-# - iperf
-# - libevent
-# - sqlite
-# - mcrypt
-# - nmap
-# - node
-# - nvm
-# - php
-# - ssh-copy-id
-# - cowsay
-# - readline
-# - openssl
-# - pv
-# - wget
-# - wrk
-# - zsh-history-substring-search
+homebrew_installed_packages:
+  - fzf
+  - guile
+  - mas
+  - openshift-cli
+  - pcsc-lite
+  - pinentry-mac
+  - pwgen
+  - qmk/qmk/qmk
+  - rust
+  - socat
+  - softhsm
+  - thefuck
+  - tree
+  - watch
+  - wget
+  - wireguard-tools
+  - yq
 
 homebrew_taps: []
 #  - homebrew/core
@@ -174,9 +162,21 @@ homebrew_cask_apps:
   - qsync-client
   - creality-print
   - teamviewer
+  - apache-directory-studio
+  - qmk-toolbox
+  - notunes
+  - vagrant
+  - wine-stable
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps:
+  - { id: 425955336, name: "Skitch (2.9)" }
+  - { id: 1640091876, name: "Budget Flow (1.5.4)" }
+  - { id: 1289197285, name: "MindNode (2023.3.1)" }
+  - { id: 1451685025, name: "WireGuard (1.0.16)" }
+  - { id: 1291898086, name: "Toggl Track (9.4.0)" }
+  - { id: 948660805, name: "AusweisApp (2.0.2)" }
+
 mas_email: ""
 mas_password: ""
 
