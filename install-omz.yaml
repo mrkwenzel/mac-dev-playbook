@@ -1,0 +1,4 @@
+---
+- name: 'Install omz'
+  shell: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+  ingore_errors: false

@@ -221,6 +221,9 @@ sublime_package_control:
   - "WordCount"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+post_provision_tasks: 
+  - 'install-omz.yaml'
+  - 'install-p10k.yaml'
+  - 'install-fzf.yaml'
 
 # xattr -cr /Applications/Chromium.app 

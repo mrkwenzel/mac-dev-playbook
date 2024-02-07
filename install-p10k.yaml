@@ -1,3 +1,19 @@
 ---
-- name: "Install p10k"
-  shell: "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+- name: 'Get current user'
+  become: false
+  shell: 'whoami'
+  register: current_user
+
+- name: 'Install Fonts'
+  copy:
+    src: '{{ item }}'
+    dest: '/Users/{{ current_user.stdout }}/Library/Fonts/{{ item }}'
+  with_items:
+    - 'MesloLGS NF Bold Italic.ttf'
+    - 'MesloLGS NF Bold.ttf'
+    - 'MesloLGS NF Italic.ttf'
+    - 'MesloLGS NF Regular.ttf'
+
+- name: 'Install p10k'
+  shell: 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k'
+  ingore_errors: true
