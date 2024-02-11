@@ -45,54 +45,57 @@ dockitems_persist:
   - name: "Notion-Calendar"
     path: "/Applications/Notion Calendar.app/"
     pos: 13
+  - name: "Obsidian"
+    path: "/Applications/Obsidian.app/"
+    pos: 14
   - name: "Warp"
     path: "/Applications/Warp.app/"
-    pos: 17
+    pos: 18
   - name: "iTerm"
     path: "/Applications/iTerm.app/"
-    pos: 18
+    pos: 19
   - name: "Docker Desktop"
     path: "/Applications/Docker.app/"
-    pos: 19
+    pos: 20
   - name: "VSCodium"
     path: "/Applications/VSCodium.app/"
-    pos: 20
+    pos: 21
   - name: "Bitwarden"
     path: "/Applications/Bitwarden.app/"
-    pos: 21
+    pos: 22
   - name: "Autodesk Fusion 360"
     path: "/Users/markus/Applications/Autodesk Fusion 360.app/"
-    pos: 22
+    pos: 23
   - name: "OBS"
     path: "/Applications/OBS.app/"
-    pos: 23
+    pos: 24
   - name: "Spotify"
     path: "/Applications/Spotify.app/"
-    pos: 24
+    pos: 25
   - name: "VMware Fusion"
     path: "/Applications/VMware Fusion.app/"
-    pos: 25
+    pos: 26
   - name: "Microsoft Word"
     path: "/Applications/Microsoft Word.app/"
-    pos: 26
+    pos: 27
   - name: "Microsoft Excel"
     path: "/Applications/Microsoft Excel.app/"
-    pos: 27
+    pos: 28
   - name: "DaVinci Resolve"
     path: "/Applications/DaVinci Resolve/DaVinci Resolve.app/"
-    pos: 28
+    pos: 29
   - name: "NordVPN"
     path: "/Applications/NordVPN.app/"
-    pos: 29
+    pos: 30
   - name: "Discord"
     path: "/Applications/Discord.app/"
-    pos: 30
+    pos: 31
   - name: "Disk Drill"
     path: "/Applications/Disk Drill.app/"
-    pos: 31
+    pos: 32
   - name: "Gemini 2"
     path: "/Applications/Gemini 2.app/"
-    pos: 32
+    pos: 33
 
 configure_sudoers: true
 sudoers_custom_config: |
@@ -167,6 +170,8 @@ homebrew_cask_apps:
   - notunes
   - vagrant
   - wine-stable
+  - obsidian
+  - pronterface
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
