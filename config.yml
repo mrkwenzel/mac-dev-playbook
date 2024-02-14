@@ -135,7 +135,6 @@ homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - docker
   - firefox
   - chromium
   - bitwarden
@@ -172,6 +171,7 @@ homebrew_cask_apps:
   - wine-stable
   - obsidian
   - pronterface
+  - podman
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -236,5 +236,7 @@ post_provision_tasks:
   - 'install-omz.yaml'
   - 'install-p10k.yaml'
   - 'install-fzf.yaml'
+  - 'link-codium.yaml'
+  - 'install-podman.yaml'
 
 # xattr -cr /Applications/Chromium.app 
